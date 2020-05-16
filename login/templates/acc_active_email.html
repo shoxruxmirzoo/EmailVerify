@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Akkountni faollashtirish</title>
+</head>
+<body>
+	<h3>
+{% autoescape off %}
+Hi <strong>{{ user.username }} </strong> ,
+<br>
+Ro'yxatda o'tish uchun shu linkga kiring http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}
+<br>
+<br>
+Raxmat)
+</h3>
+</body>
+</html>
